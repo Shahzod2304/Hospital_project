@@ -5,3 +5,5 @@ from .models import *
 admin.site.register(Xizmatlar)
 admin.site.register(Doctors)
 admin.site.register(Contact)
+admin.site.register(Book_Appointment)
+    

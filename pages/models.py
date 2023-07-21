@@ -30,6 +30,16 @@ class Contact(models.Model):
         return f"{self.user_name} - {self.patient_name}"
 
     
+class Book_Appointment(models.Model):
+    doctorName =  models.ForeignKey('Doctors', on_delete=models.CASCADE)
+    patient_name = models.CharField(max_length=25)
+    department_name = models.CharField(max_length=50)
+    phone_number = models.PositiveIntegerField(max_length=12)
+    symptoms = models.CharField(max_length=100)
+    date = models.DateField()
+
+    def __str__(self):
+        return self.patient_name
 
 
 
